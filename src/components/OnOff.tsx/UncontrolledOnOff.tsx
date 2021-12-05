@@ -1,12 +1,9 @@
 import { useState } from 'react'
 import s from './OnOff.module.css'
 
-type OnOffPropsType = {
-    onOff:boolean
-    setOnOff:(onOff:boolean)=> void
-}
+const UncontrolledOnOff = () => {
 
-const OnOff = ({onOff,setOnOff,...props}:OnOffPropsType) => {
+    let [onOff, setOnOff]= useState(false)
 
     let onOnHandler = () => {
         setOnOff(true)
@@ -28,4 +25,4 @@ const OnOff = ({onOff,setOnOff,...props}:OnOffPropsType) => {
     )
 }
 
-export default OnOff;
+export default UncontrolledOnOff;
