@@ -1,5 +1,8 @@
 type AccordionPropsType = {
     titleValue: string
+    /**
+     * If collapsed true we can see accordion
+     */
     collapsed: boolean
     setCollapsed:(collapsed:boolean)=>void
 }

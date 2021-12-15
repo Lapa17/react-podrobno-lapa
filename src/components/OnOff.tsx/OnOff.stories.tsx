@@ -7,7 +7,7 @@ import  OnOff  from './OnOff';
 import { useState } from '@storybook/addons';
 
 export default {
-  title: 'OnOff',
+  title: 'components/OnOff',
   component: OnOff,
 } as ComponentMeta<typeof OnOff>;
 
@@ -29,7 +29,7 @@ OffMode.args = {
     setOnOff:callback,
 };
 
-export const ChanginOnOffMode = () => {
+export const ChanginOnOffMode:ComponentStory<typeof OnOff> = (args) => {
     const [value,setValue] = useState<boolean>(false)
     return <OnOff onOff={value} setOnOff={setValue}/>
 }

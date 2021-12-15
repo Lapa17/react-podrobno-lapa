@@ -7,7 +7,7 @@ import  Accordion  from './Accordion';
 import { useState } from '@storybook/addons';
 
 export default {
-  title: 'Accordion',
+  title: 'components/Accordion',
   component: Accordion,
 } as ComponentMeta<typeof Accordion>;
 
@@ -31,7 +31,11 @@ UnCollapsedMode.args = {
    setCollapsed:callback
 };
 
-export const ChanginMode = () => {
+export const ChanginMode:ComponentStory<typeof Accordion> = (args) => {
     const [value,setValue] = useState<boolean>(false)
-    return <Accordion titleValue='List'  collapsed={value} setCollapsed={setValue}/>
+    return <Accordion {...args} collapsed={value} setCollapsed={setValue}/>
 }
+
+ChanginMode.args = {
+   titleValue:'List',
+};

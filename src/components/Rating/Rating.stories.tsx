@@ -5,7 +5,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import  Rating, { RatingValueType }  from './Rating';
 
 export default {
-  title: 'Rating',
+  title: 'components/Rating',
   component: Rating,
 } as ComponentMeta<typeof Rating>;
 
@@ -50,7 +50,7 @@ RatingWithFiveStars.args = {
     onClick:callback,
 };
 
-export const ChanginRating = () => {
+export const ChanginRating:ComponentStory<typeof Rating> = (args) => {
     const [value,setValue] = useState<RatingValueType>(0)
     return <Rating value={value}  onClick={setValue}/>
 }
